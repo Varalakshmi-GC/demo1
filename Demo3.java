@@ -1,17 +1,25 @@
-package day2;
+package day5;
 
 public class Demo3 {
-	public class Test {
-		int a = 20;
-
-		void m1(int b) {
-			System.out.println("dfasdf "+b);
-			System.out.println("dfasdf "+a);
-		}
 
 		public static void main(String[] args) {
-			Test   vv = new Test();
-			vv.m1(4);
+			String s1="Hello";
+			String s2="Hello";
+			String s3=new String("Hello");
+			String s4=new String();
+			System.out.println("s1==s2:"+(s1==s2));
+		    System.out.println("s1equals(s2):"+s1.equals(s2));
+		    System.out.println();
+			System.out.println("s1==s3:"+(s1==s3));
+			System.out.println("s1equals(s3):"+s1.equals(s3));
+			System.out.println();
+			System.out.println("s3==s4:"+(s3==s4));
+		    System.out.println("s3equals(s4):"+s3.equals(s4));
+		    System.out.println();
+					
+			
+
+			
+			
 		}
-	}
 }

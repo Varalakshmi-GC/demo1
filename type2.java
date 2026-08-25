@@ -1,24 +1,15 @@
-package day3;
+package day5;
 
-		import java.util.Scanner;
+public class type2 {
 
-		class type2{
-			static void validate(int age) {
-				if (age < 18) {
-				
-					throw new ArithmeticException("not elgible for vote");
-				} else {
-					System.out.println("welcome to the voteing");
-				}
-			}
-
-			public static void main(String[] args) {
-				Scanner s = new Scanner(System.in);
-				System.out.println("please enter your age ");
-				int n = s.nextInt();
-				validate(n);
-				System.out.println("rest of the code");
-			}
+		public static void main(String[] args) {
+			String s1 = "hello";
+			String s2 = s1;
+			s1=s1+"wolrd";
+			System.out.println("S1="+s1);
+			System.out.println("S2="+s2);
+			
 		}
-
+		
+	}
 

@@ -1,19 +1,12 @@
-package day3;
+package day5;
 
 public class type1 {
-
-	public static void main(String[] args) {
-		try {
-			System.out.println("anand");
-			System.out.println(10/0);
-		}catch (NullPointerException ne) {
-			System.out.println("u r getting ne"+ne);
-		}finally {
-			System.out.println("finally block is always executed");
+		public static void main(String[] args) {
+			String name="anand";
+			String s1 =name.concat("pawar");
+			System.out.println(name);
+			System.out.println(s1);
 		}
-		System.out.println("rest of the code");
-	}
 
 	}
-
 
