@@ -1,23 +1,21 @@
-package day4;
-import java.util.HashSet;
+package day6;
 
-public class Demo {
-	 public static void main(String[] args) {
+public class Demo{
+	public static void main(String[]agrs) {
 
-	        HashSet<Integer> numbers = new HashSet<>();
+	        StringBuilder sb = new StringBuilder("Hello");
 
-	        numbers.add(10);
-	        numbers.add(20);
-	        numbers.add(30);
-	        numbers.add(40);
-	        numbers.add(50);
+	        // 1. append()
+	        sb.append(" Java");
+	        System.out.println("After append: " + sb);
 
-	        int target = 40;
+	        // 2. insert()
+	        sb.insert(6, "World ");
+	        System.out.println("After insert: " + sb);
 
-	        if (numbers.contains(target)) {
-	            System.out.println("Number found");
-	        } else {
-	            System.out.println("Number not found");
-	        }
+	        // 3. reverse()
+	        sb.reverse();
+	        System.out.println("After reverse: " + sb);
 	    }
 	}
+
