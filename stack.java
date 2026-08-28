@@ -1,17 +1,22 @@
-package day7;
+package day8;
 
-public class stack {
-static void methodA() {
-	System.out.println("Inside methodA");
-    methodB();
-    System.out.println("back to  methodA");
-    }
-static void methodB() {
-	System.out.println("Inside methodB");
-}
-public static void main(String[]args) {
-System.out.println("Inside main");
-methodA();
-System.out.println("back to  methodA");
-}
-}
+	import java.util.Stack;
+
+	public class stack {
+	    public static void main(String[] args) {
+
+	        Stack<Integer> stack = new Stack<>();
+
+	        stack.push(10);
+	        stack.push(20);
+	        stack.push(30);
+
+	        System.out.println("Stack: " + stack);
+
+	        System.out.println("Top element: " + stack.peek());
+
+	        System.out.println("Removed: " + stack.pop());
+
+	        System.out.println("Stack after pop: " + stack);
+	    }
+	}
