@@ -1,23 +1,37 @@
-package day10;
+package day11;
 
 public class demo9 {
-	public class Demo {
-	    public static void main(String[] args) {
-	        int[] nums = {2, 1, 1, 0, 4};
-	        int maxReach = 0;
-	        for (int i = 0; i < nums.length; i++) {
-	            // If current position cannot be reached
-	            if (i > maxReach) {
-	                break;
-	            }
-	            // Find the farthest position we can reach
-	            maxReach = Math.max(maxReach, i + nums[i]);
-	        }
-	        if (maxReach >= nums.length - 1) {
-	            System.out.println("Can reach the last position");
-	        } else {
-	            System.out.println("Cannot reach the last position");
-	        }
-	    }
-	}
-}
+	
+		    static class Node {
+		        Node[] children = new Node[26];
+		        boolean isEnd;
+		    }
+		    static Node root = new Node();
+
+		    public static void insert(String word) {
+
+		        Node current = root;
+
+		        for (int i = 0; i < word.length(); i++) {
+
+		            int index = word.charAt(i) - 'a';
+
+		            if (current.children[index] == null) {
+		                current.children[index] = new Node();
+		            }
+
+		            current = current.children[index];
+		        }
+
+		        current.isEnd = true;
+		    }
+
+		    public static void main(String[] args) {
+		        insert("cat");
+		        insert("car");
+		        insert("can");
+		        insert("cab");
+		        System.out.println("Words inserted successfully");
+		    }
+		}
+

@@ -1,7 +1,10 @@
 package day11;
 
-public class demo6 {
+public class day10 {
+	public class MatrixSearch {
+
 	    public static void main(String[] args) {
+
 	        int[][] matrix = {
 	            {10, 20, 30, 40},
 	            {15, 25, 35, 45},
@@ -9,10 +12,13 @@ public class demo6 {
 	            {50, 55, 60, 70}
 	        };
 
-	        int target = 37;
+	        int target = 38;
+
 	        int row = 0;
 	        int col = matrix[0].length - 1;
+
 	        while (row < matrix.length && col >= 0) {
+
 	            if (matrix[row][col] == target) {
 	                System.out.println("Element found");
 	                return;
@@ -24,6 +30,8 @@ public class demo6 {
 	                row++;
 	            }
 	        }
+
+	        System.out.println("Element not found");
 	    }
 	}
-
+}
